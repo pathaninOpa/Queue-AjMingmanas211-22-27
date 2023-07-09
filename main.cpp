@@ -20,19 +20,22 @@ Queue q;
       while (cash < price);
       cout<< "Thank you _/\\_\n";
       if (cash > price){
-        cout << "The change is "<<cash - price<<" baht."<<endl;
+        cout << "The change is "<<cash - price<<" baht."<<endl<<endl;
       }
+      else {cout<<endl;}
       qc++; itmc--;
     }
     else{
       q.enqueue(atoi(argv[i]),atoi(argv[i+1]));
       //cout<<menu[atoi(argv[i])-1]<<endl;
+      cout<< "Customer no. "<<qc+1<<endl;
       cout << "Order received"<<endl;
       i++; itmc++;
     }
   }
-
-  cout<<"End of program"<<endl;
-
-  }
+  cout<<"===============\n";
+  (itmc!=0) ? cout<<"There are "<<itmc<<" ppl left in the queue.\n": cout<<"No one was left in the queue.\n";
+  (itmc!=0) ? cout<<"Order left in Queue: \n": cout<<"";
+  return 0;
+}
 
