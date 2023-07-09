@@ -1,10 +1,11 @@
 #ifndef node_h
 #define  node_h
 #include <iostream>
+using namespace std;
 
 class NODE{
 	 int order_number,qty;
-   char menu[10][2]={"ramen", "somtum"};
+   char menu[10][10]={"ramen", "somtum"};
 	NODE *nextPtr;
 public:
 	NODE(int,int=1);
@@ -24,6 +25,8 @@ NODE::NODE(int q,int o){
 int NODE::get_value(){
 	int price;
   if(order_number>3 || order_number<1)
+  price= pricelist[order_number-1]*qty;
+  cout<<menu[order_number-1]<<endl;
 
 }
 
