@@ -33,14 +33,13 @@ int NODE::get_value(){
     return price;
   }
   else{
-    cout<<"Wrong Order number..\n";
+    cout<<"no food\n";
     return 0;
   }
 }
 
 NODE* NODE::get_next(){
 	return nextPtr;
-
 }
 
 void NODE::set_next(NODE *t){
